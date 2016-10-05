@@ -1,0 +1,40 @@
+{
+  "name": "maxdome-botbuilder",
+  "description": "Search for assets and manage your maxdome account with a botbuilder chatbot",
+  "version": "1.0.0",
+  "homepage": "http://github.com/dragonprojects/maxdome-botbuilder",
+  "author": {
+    "name": "Sharaal",
+    "email": "developer@dragonprojects.de",
+    "url": "http://dragonprojects.de"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dragonprojects/maxdome-botbuilder.git"
+  },
+  "license": "MIT",
+  "private": true,
+  "readmeFilename": "README.md",
+  "scripts": {
+    "postinstall": "npm run build",
+    "start": "node dest/restify.js",
+    "develop": "npm run build && node -r dotenv/config dest/cli.js",
+    "build": "babel src -d dest"
+  },
+  "dependencies": {
+    "babel-cli": "^6.7.5",
+    "babel-plugin-transform-async-to-generator": "^6.8.0",
+    "babel-preset-es2015-node4": "^2.1.0",
+    "botbuilder": "^3.2.3",
+    "info-command": "^2.0.0",
+    "mxd-auth-commands": "^3.0.0",
+    "mxd-heimdall": "^2.1.0",
+    "mxd-notepad-commands": "^1.1.0",
+    "mxd-search-command": "^2.0.0",
+    "mxd-session-storage": "^1.1.0",
+    "restify": "^4.1.1"
+  },
+  "devDependencies": {
+    "dotenv": "^2.0.0"
+  }
+}
